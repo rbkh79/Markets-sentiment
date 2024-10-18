@@ -1,0 +1,26 @@
+# فهرست مطالب
+
+- [Introduction to Continual Learning](#introduction-to-continual-learning)
+- [Market Sentiment Analysis Using Continual Learning](#market-sentiment-analysis-using-continual-learning)
+
+---
+
+## Introduction to Continual Learning
+
+Here, you will find an informal introduction to Continual Learning. For a comprehensive overview of the field, have a look at our research section, in which you can find in-depth surveys on the topic together with specific approaches and techniques to address the Continual Learning challenge.
+
+### What is Continual / Lifelong Learning?
+
+Continual Learning, also known as Lifelong learning, is built on the idea of learning continuously about the external world in order to enable the autonomous, incremental development of ever more complex skills and knowledge.
+
+A Continual learning system can be defined as an adaptive algorithm capable of learning from a continuous stream of information, with such information becoming progressively available over time and where the number of tasks to be learned (e.g. membership classes in a classification task) are not predefined...
+
+---
+
+## Market Sentiment Analysis Using Continual Learning
+
+Market Sentiment Analysis refers to the process of analyzing the overall attitude or feelings of investors and traders toward a particular financial market or asset. It plays a critical role in predicting future market trends based on the emotions and opinions of market participants. Market sentiment can be extracted from various sources such as news articles, social media, and financial reports, making it a valuable tool for investors and institutions.
+
+### Why Use Continual Learning in Market Sentiment Analysis?
+
+Continual Learning (CL) is a machine learning paradigm designed to train models incrementally on new data while preserving knowledge from previous tasks...
