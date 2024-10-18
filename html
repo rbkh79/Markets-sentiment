@@ -3,39 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continual Learning</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Continual Learning and Market Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .section {
+            width: 48%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            cursor: pointer;
+            color: #007BFF;
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#introduction">Introduction to Continual Learning</a></li>
-            <li><a href="#market-sentiment">Market Sentiment Analysis Using Continual Learning</a></li>
-        </ul>
-    </div>
-    <div class="main-content">
-        <section id="introduction">
-            <h2>Introduction to Continual Learning</h2>
-            <p>Here, you will find an informal introduction to Continual Learning. For a comprehensive overview of the field, have a look at our research section, in which you can find in-depth surveys on the topic together with specific approaches and techniques to address the Continual Learning challenge.</p>
-            
-            <h3>What is Continual / Lifelong Learning?</h3>
-            <p>Continual Learning, also known as Lifelong learning, is built on the idea of learning continuously about the external world in order to enable the autonomous, incremental development of ever more complex skills and knowledge.</p>
-            <p>A Continual learning system can be defined as an adaptive algorithm capable of learning from a continuous stream of information, with such information becoming progressively available over time and where the number of tasks to be learned (e.g. membership classes in a classification task) are not predefined. Critically, the accommodation of new information should occur without catastrophic forgetting or interference.</p>
-            <blockquote>Parisi et al. Continual Lifelong Learning with Neural Networks: a review, 2019.</blockquote>
-            <p>Hence, in the Continual Learning scenario, a learning model is required to incrementally build and dynamically update internal representations as the distribution of tasks dynamically changes across its lifetime. Ideally, part of such internal representations will be general and invariant enough to be reusable across similar tasks, while another part should preserve and encode task-specific representations.</p>
 
-            <h3>The Deep Learning approach to Learning</h3>
-            <p>Deep Learning is a subset of Machine Learning in which models - artificial neural networks, in most of the cases - learn to map input to output by building an adaptive, internal hierarchical representation. Artificial neural networks are made of units linked together by weighted connections. The learning process is defined by changing the value of the weights in order to minimize a cost function which measures how much the output produced by the model differs from the expected outcome.</p>
-            <p>Such learning process is adaptive, meaning that it only requires a (possibly large) set of data from which to learn and a suitable cost function to specify the type of task to be performed.</p>
-            <p>Decades of research showed that Deep Learning models are able to accomplish a range of different tasks, often surpassing human-level performance. They are widespread in several fields like language translation, self-driving cars, bio-medical applications, stock prediction in finance… just to name a few!</p>
-            <p>The astonishing accomplishments made by Deep Learning are confined to a specific task: without additional training, a Deep Learning neural network which is able to beat the (human) world champion at the game of Go will not be able to drive a car or to translate from English to French. However, nothing prevents us from continuing to train the network on new tasks.</p>
-            <p>What will be the behavior of the network at the end of the new learning phase? This question is at the heart of the Continual Learning field.</p>
-        </section>
-        <section id="market-sentiment">
-            <h2>Market Sentiment Analysis Using Continual Learning</h2>
-            <p>Content about Market Sentiment Analysis...</p>
-        </section>
+    <h1>Market Sentiment Analysis Using Continual Learning</h1>
+
+    <div class="container">
+        <div class="section">
+            <h2 onclick="toggleContent('continualLearningContent')">Continual Learning</h2>
+            <div id="continualLearningContent" class="content">
+                <p><strong>What is continual learning?</strong><br>
+                Continual learning, also known as lifelong learning or incremental learning, is a machine learning paradigm that focuses on training models to acquire new knowledge and adapt to changing data over time. In contrast to traditional machine learning, where models are typically trained on fixed datasets and assume that the data distribution remains constant, continual learning is designed to handle evolving data distributions and continuously learn from new data while retaining knowledge from previous experiences. This is particularly important in scenarios where the data is non-stationary, meaning it changes over time.</p>
+
+                <p>Here are some key concepts and challenges associated with continual learning:</p>
+                <ul>
+                    <li><strong>Catastrophic Forgetting:</strong> One of the main challenges in continual learning is preventing catastrophic forgetting...</li>
+                    <li><strong>Replay Buffers:</strong> Replay buffers store a subset of past data...</li>
+                    <li><strong>Regularization:</strong> Techniques like elastic weight consolidation (EWC) and synaptic intelligence (SI)...</li>
+                    <li><strong>Architectural Approaches:</strong> Some approaches involve modifying the neural network architecture...</li>
+                    <li><strong>Transfer Learning:</strong> Transfer learning techniques can be adapted to continual learning scenarios...</li>
+                    <li><strong>Meta-Learning:</strong> Meta-learning is another approach that can help models adapt quickly to new tasks...</li>
+                    <li><strong>Evaluation Metrics:</strong> Developing appropriate evaluation metrics for continual learning is challenging...</li>
+                </ul>
+                <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/8466506/WpawVboTnBuokjqa.jpg?Expires=1730451909&Signature=OddgxFby2lzy2v0SrmzZ~fr4WL9PlIJngk~w50wioOH88-q66BuVqKpi7fLnke2n3h1S1CcAtf3dGcqulfrGoZm1lJnBV56Fi8Bel~T-xKo1Du3YJj~fnJFBRorbM5xrSPP9UxYAw6N6j-p3HHqDx63RQXkl-I-8cWi4w4Da1TUKKjtgMmdfRddsGo9mPMlUdo0Vp8C4hizT8-5mhh7kq3lng7SVYVNNh2zujsNAEgdNYj~ukltNB3Um4lcPC6qIWxo7NvXPqrAIdx1G7WJQQuw1tzPUzZaEV9odwzq5bzChC0CeejbSNU3pUrTeBjofUxqvb0U2kvaV7GAdBowgEA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Static vs Adaptive ML">
+            </div>
+        </div>
+        <div class="section">
+            <h2 onclick="toggleContent('marketSentimentContent')">Market Sentiment Analysis Using Continual Learning</h2>
+            <div id="marketSentimentContent" class="content">
+                <p>Content related to market sentiment analysis goes here...</p>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
